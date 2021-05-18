@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Resume</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h1>Edit Your Resume</h1>
+    <div class="center">
+    <form name="Edit_form" action="edit.php" method="POST">
+        <label>Enter Name :- </label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <br>
+        <label>Enter Email :- </label><br>
+        <input type="text" id="email" name="email"><br>
+
+        <br>
+        <label>Enter Phone :- </label><br>
+        <input type="number" id="phone" name="phone"><br>
+
+        <br>
+        <label>Enter Synopsis :- </label><br>
+        <textarea id="synopsis" name="synopsis" rows="5" cols="100"></textarea>
+
+        <br><br>
+        <table>
+            <tr><th>Exam</th><th>Score</th></tr>
+            <tr><td>SSLC</td><td><input type="number" name="sslc_score"></td></tr>
+            <tr><td>HSC</td><td><input type="number" name="hsc_score"></td></tr>
+            <tr><td>Bachelors</td><td><input type="number" name="bachelors_score"></td></tr>
+        </table>
+
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</div>
+</body>
+</html>
