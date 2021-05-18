@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Registration.css">
+</head>
+<body>
+    <h1 class="top_Heading"><span style="border-bottom:3px double crimson;">Registration Form</span></h1>
+    <div class="center">
+        <label class="labels">Enter Your Name</label>
+        <input type="text"  class="inputting" id="name" size="30">
+
+        <br><label class="labels">Enter Your Email</label>
+        <input type="text"  class="inputting" id="email" size="30">
+
+        <br><label class="labels">Enter Your User ID</label>
+        <input type="text"  class="inputting" id="userid" size="30">
+
+       <br><label class="labels">Enter Your Password</label>
+        <input type="password"  class="inputting" id="password"  size="30">
+
+        <br><button onclick="check()"><span style="color: crimson;margin: 10px;font-size: 20px;">Submit</span> </button>
+    </div>
+
+    <script>
+        function check(){
+            name = document.getElementById("name").value
+            email = document.getElementById("email").value
+            userid = document.getElementById("userid").value
+            password = document.getElementById("password").value
+            message=""
+            if(name.search(/[a-zA-Z\s]{3,}/)==-1)
+                message += "1. Name Should Be A Combination Of Alphabet And Spaces And Of Atleast Length 3."
+            if(email.search(/org|com|net$/)==-1)
+                message+="\n2. Invalid Email."
+            if(userid.length<=8)
+                message+="\n3. Length Of User Id Should Be Greater Than 8."
+            if(message!="")
+                alert(message)
+        }
+    </script>
+</body>
+</html>
